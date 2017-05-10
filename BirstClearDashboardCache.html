@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birst Chachinator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="birstcache.js"></script>
+</head>
+<body style="background-color: #FF5800">
+
+<br>
+<label style="font-family: Helvetica Neue, Helvetica, Arial; color: #f5f5f5; font-size: 36px;">Birst Cachinator</label>
+<br>
+
+<div class="container">
+
+    <!-- Row start -->
+    <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <i class="icon-calendar"></i>
+                    <h3 class="panel-title">Server Properties</h3>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal row-border" action="#">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Server</label>
+                            <div class="col-md-10">
+                                <input type="text" id="server" class="form-control" value="https://mrc.eu1.birst.com/CommandWebService.asmx">
+                            </div>
+                        </div>
+                        <form class="form-horizontal row-border" action="#">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">User ID</label>
+                                <div class="col-md-10">
+                                    <input type="text" id="uid" class="form-control" value="gjakobson@birst.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Password</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" type="password" id="pwd" value="Birst312$">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Space ID</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" type="text" id="spaceID" value="415b1b36-bab0-4498-ab5b-6b39313b7e69">
+                                </div>
+                            </div>
+
+                            <button type="button"  class="btn btn-primary" onclick="doLogin()">Get Token</button>
+                            <div class="form-group">
+
+
+                                <label class="col-md-2 control-label">Token</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" type="text" id="Token" value="">
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row end -->
+
+
+    <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <i class="icon-calendar"></i>
+                    <h3 class="panel-title">Queries</h3>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal row-border" action="#">
+
+                        <button class="btn btn-primary" type="button" onclick="processClearDashboardCache()">Clear Dashboard Cache</button>
+
+                        <div class="panel-body">
+                            <form class="form-horizontal row-border" action="#">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="20" id="Results">--- LOGS WILL DISPLAY HERE----</textarea>
+                                </div>
+
+
+                        </div>
+                </div>
+
+            </div>
+
+
+</body>
+</html>
