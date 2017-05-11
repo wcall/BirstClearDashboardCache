@@ -33,6 +33,7 @@ function doLogin(){
         success: processSuccessLogin,
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("some error: " + errorThrown + ";" + XMLHttpRequest); 
+            console.log("some error: " + errorThrown + ";" + XMLHttpRequest); 
         }
         //error: processError
     });
