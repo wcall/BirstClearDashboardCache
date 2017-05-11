@@ -31,7 +31,9 @@ function doLogin(){
         dataType: "xml",
         data: soapRequest,
         success: processSuccessLogin,
-        error: processError
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+     alert("some error " + textStatus);
+        //error: processError
     });
 }
 
