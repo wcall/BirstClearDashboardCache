@@ -144,7 +144,7 @@ function processError(x, y, z){
 
 function showResult(data, status, req) {
 
-        var text = "Response: " + req.responseText + "...\n\n";
+        var text = "Response: " + req.responseText;
         console.log("Response: " + req.responseText);
     $("#Results").val(text);
 
