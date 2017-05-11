@@ -38,6 +38,7 @@ function doLogin(){
 function processClearDashboardCache(){
     console.log("Entered processClearDashboardCache");
     var soapRequest = '<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bir="http://www.birst.com/"><soapenv:Header/><soapenv:Body><bir:clearDashboardCache><bir:token>' + Token + '</bir:token><<bir:spaceID>' + SpaceID + '</bir:spaceID></bir:clearDashboardCache></soapenv:Body></soapenv:Envelope>'
+    console.log("soapRequest=" + soapRequest);
 
     $.ajax({
         type: "POST",
