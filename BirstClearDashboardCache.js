@@ -32,7 +32,8 @@ function doLogin(){
         data: soapRequest,
         success: processSuccessLogin,
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-     console.log("some error " + textStatus);
+            alert("some error " + textStatus); 
+        }
         //error: processError
     });
 }
