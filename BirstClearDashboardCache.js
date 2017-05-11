@@ -41,7 +41,7 @@ function processClearDashboardCache(){
 
     $.ajax({
         type: "POST",
-        crossDomain=true,
+        crossDomain:true,
         url: wsUrl,
         contentType: "text/xml",
         headers: {
