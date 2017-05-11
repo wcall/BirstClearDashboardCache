@@ -32,7 +32,7 @@ function doLogin(){
         data: soapRequest,
         success: processSuccessLogin,
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error " + textStatus); 
+            alert("some error: " + errorThrown + ";" + XMLHttpRequest); 
         }
         //error: processError
     });
