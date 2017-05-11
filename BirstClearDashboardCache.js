@@ -15,7 +15,6 @@ var QueryCounter=0;
 
 
 function doLogin(){
-    console.log("Entered doLogin");
     $("#Token").val('Pending......')
     wsUrl = $("#server").val();
     soapRequest = '<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bir="http://www.birst.com/"><soapenv:Header/><soapenv:Body><bir:Login><bir:username>' + $("#uid").val() + '</bir:username><bir:password>' + $("#pwd").val() + '</bir:password></bir:Login></soapenv:Body></soapenv:Envelope>';
@@ -32,11 +31,7 @@ function doLogin(){
         dataType: "xml",
         data: soapRequest,
         success: processSuccessLogin,
-        error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("some error: " + errorThrown + ";" + XMLHttpRequest); 
-            console.log("some error: " + errorThrown + ";" + XMLHttpRequest); 
-        }
-        //error: processError
+        error: processError
     });
 }
 
@@ -141,15 +136,14 @@ function executeQuery(){
 }
 
 function processError(x, y, z){
-    console.log("Entered processError");
-    $("#Token").val("Error: "+ x.status + ";z=" + z);
+    $("#Token").val("Error: "+ x.status);
 }
 
 
 function showResult(data, status, req) {
 
         var text = $("#Results").val();
-        text = text + "\n Response: " + req.responseText.substring(0,400) + "...\n\n";
+        text = text + "\n Response: " + req.responseText + "...\n\n";
 
     $("#Results").val(text);
 
