@@ -36,11 +36,12 @@ function doLogin(){
 }
 
 function processClearDashboardCache(){
-
+    console.log("Entered processClearDashboardCache");
     var soapRequest = '<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bir="http://www.birst.com/"><soapenv:Header/><soapenv:Body><bir:clearDashboardCache><bir:token>' + Token + '</bir:token><<bir:spaceID>' + SpaceID + '</bir:spaceID></bir:clearDashboardCache></soapenv:Body></soapenv:Envelope>'
 
     $.ajax({
         type: "POST",
+        crossDomain=true,
         url: wsUrl,
         contentType: "text/xml",
         headers: {
@@ -142,8 +143,7 @@ function processError(x, y, z){
 
 function showResult(data, status, req) {
 
-        var text = $("#Results").val();
-        text = text + "\n Response: " + req.responseText + "...\n\n";
+        var text = "Response: " + req.responseText + "...\n\n";
 
     $("#Results").val(text);
 
