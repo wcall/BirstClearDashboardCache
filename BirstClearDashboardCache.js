@@ -23,6 +23,7 @@ function doLogin(){
 
     $.ajax({
         type: "POST",
+        crossDomain:true,
         url: wsUrl,
         contentType: "text/xml",
         headers: {
