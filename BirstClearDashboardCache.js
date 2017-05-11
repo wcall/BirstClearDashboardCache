@@ -15,6 +15,7 @@ var QueryCounter=0;
 
 
 function doLogin(){
+    alert("Entered doLogin");
     $("#Token").val('Pending......')
     wsUrl = $("#server").val();
     soapRequest = '<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bir="http://www.birst.com/"><soapenv:Header/><soapenv:Body><bir:Login><bir:username>' + $("#uid").val() + '</bir:username><bir:password>' + $("#pwd").val() + '</bir:password></bir:Login></soapenv:Body></soapenv:Envelope>';
