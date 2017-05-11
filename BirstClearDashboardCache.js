@@ -135,7 +135,7 @@ function executeQuery(){
 }
 
 function processError(x, y, z){
-    $("#Token").val("Error: "+ x.status);
+    $("#Token").val("Error: "+ x.status + ";x=" + x);
 }
 
 
