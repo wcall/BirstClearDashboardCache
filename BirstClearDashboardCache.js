@@ -56,7 +56,7 @@ function processClearDashboardCache(){
 function processSuccessLogin(data, status, req) {
     if (status == "success") {
 
-
+        alert("Entered processSuccessLogin");
 
         if ($(req.responseXML).find("faultstring").text()) {
             Token = $(req.responseXML).find("faultstring").text();
@@ -135,7 +135,8 @@ function executeQuery(){
 }
 
 function processError(x, y, z){
-    $("#Token").val("Error: "+ x.status + ";x=" + x);
+    alert("Entered processError");
+    $("#Token").val("Error: "+ x.status + ";z=" + z);
 }
 
 
