@@ -144,7 +144,7 @@ function processError(x, y, z){
 function showResult(data, status, req) {
 
         var text = "Response: " + req.responseText + "...\n\n";
-
+        console.log("Response: " + req.responseText);
     $("#Results").val(text);
 
 //uptickProgress();
